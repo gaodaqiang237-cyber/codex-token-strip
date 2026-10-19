@@ -1,0 +1,26 @@
+name: Test and build
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - if: runner.os == 'Windows'
+        run: npm run build
+      - if: runner.os == 'Windows' && matrix.node == 24
+        run: npm run package
+      - if: runner.os == 'Windows' && matrix.node == 24
+        uses: actions/upload-artifact@v7
+        with:
+          name: codex-token-strip-windows-x64
+          path: dist/*

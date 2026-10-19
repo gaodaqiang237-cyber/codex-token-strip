@@ -1,0 +1,15 @@
+{
+  "name": "codex-token-strip",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small, local Windows status strip for Codex token costs, estimated speed and cache hits.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.cjs",
+    "start": "node scripts/launch.cjs",
+    "stop": "node scripts/launch.cjs --stop",
+    "package": "node scripts/package.cjs"
+  }
+}

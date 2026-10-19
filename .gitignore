@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.local/
+app/overlay/*.exe
+app/overlay/*.pdb
+tests/auto-token-fixtures/
+*.log
+*.jsonl
+settings.json
+runtime.json
+backend.json
+probe.json
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store

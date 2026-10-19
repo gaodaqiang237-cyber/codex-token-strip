@@ -1,0 +1,28 @@
+{
+  "checkedOn": "2026-10-19",
+  "source": "https://developers.openai.com/api/docs/pricing",
+  "currency": "USD",
+  "unit": "per-million-tokens",
+  "longContextThreshold": 272000,
+  "longInputMultiplier": 2,
+  "longOutputMultiplier": 1.5,
+  "tierMultipliers": {"default": 1, "standard": 1, "fast": 2, "priority": 2, "flex": 0.5, "batch": 0.5},
+  "models": {
+    "gpt-6.1-sol": {"input": 2, "cachedInput": 0.1, "cacheWrite": 2.5, "output": 10, "ultrafast": 6},
+    "gpt-6-sol": {"input": 2, "cachedInput": 0.2, "cacheWrite": 2.5, "output": 10},
+    "gpt-6-astra": {"input": 10, "cachedInput": 1, "cacheWrite": 12.5, "output": 50, "ultrafast": 6},
+    "gpt-6-luna": {"input": 0.1, "cachedInput": 0.01, "cacheWrite": 0.125, "output": 0.5},
+    "gpt-5.6-sol": {"input": 4, "cachedInput": 0.4, "cacheWrite": 5, "output": 20},
+    "gpt-5.6-terra": {"input": 2, "cachedInput": 0.2, "cacheWrite": 2.5, "output": 12},
+    "gpt-5.6-luna": {"input": 0.2, "cachedInput": 0.02, "cacheWrite": 0.25, "output": 1.2}
+  },
+  "modelSources": {
+    "gpt-6.1-sol": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "gpt-6-sol": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+    "gpt-6-astra": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "gpt-6-luna": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "gpt-5.6-sol": "https://developers.openai.com/api/docs/pricing",
+    "gpt-5.6-terra": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+    "gpt-5.6-luna": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+  }
+}
